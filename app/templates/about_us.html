@@ -1,0 +1,236 @@
+{% extends 'index.html' %}  {% load static %}
+
+<!-- add header block too if you want that in your page -->
+
+{% block content %}
+<!-- enter the contents of desired pages here -->
+<header class="header-2">
+
+  <div class="page-header min-vh-75 relative" style="background-image: url({% static 'assets/images/yy.jpg' %})">
+
+    <!-- <span class="mask bg-gradient-primary opacity-4"></span> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">About Us</h1>
+          <p class="lead text-white mt-3">
+            Udaipur is the City of Lakes. Udaipur is one of the most beautiful
+            cities in India, and I can proudly say that I live in Udaipur. The
+            Fast Food of Udaipur's streets is so amazing that I can guarantee
+            that you will not find fast food like Udaipur anywhere else in
+            India.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+  <!-- Section with four info areas left & one card right with image and waves -->
+  <section class="py-7">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="row justify-content-start">
+            <div class="col-md-6">
+              <div class="info">
+                <i class="material-icons text-3xl text-gradient text-info mb-3">Developers</i>
+                <h5>People Behind</h5>
+                <p>Shubham K., Shubham v., Akshi M.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info">
+                <i class="material-icons text-3xl text-gradient text-info mb-3">Idea</i>
+                <h5>Idea that started it all</h5>
+                <p>To make travel planning easier and hassle-free.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-start mt-4">
+            <div class="col-md-6">
+              <div class="info">
+                <i class="material-icons text-3xl text-gradient text-info mb-3">Goal</i>
+                <h5>Our goal</h5>
+                <p>To make it the best travel guide.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info">
+                <i class="material-icons text-3xl text-gradient text-info mb-3">Support</i>
+                <h5>Supported by</h5>
+                <p>trained by Arcgate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
+          <div class="card">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <a class="d-block blur-shadow-image">
+                <img src="{% static '/assets/images/udaipur7.jpeg' %}" />
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="font-weight-normal">Feedback</h5>
+              <p class="mb-0">
+                “It is in our nature to explore, to reach out into the unknown.
+                The only true failure would be not to explore at all.” - Ernest
+                Shackleton."
+              </p>
+              <a href="/feedback">
+                <button type="button" class="btn bg-gradient-info btn-sm mb-0 mt-3">
+                  Feedback
+                </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
+  <section class="pb-5 position-relative bg-gradient-dark mx-n3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 text-start mb-5 mt-5">
+          <h3 class="text-white z-index-1 position-relative">Travel Routes</h3>
+          <p class="text-white opacity-8 mb-0">
+            A perfect travel guide is a must for any vacation, and we have
+            prepared the best one for you. If you’re going to the city, you can
+            choose one of the following routes.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <div class="card card-profile mt-4">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12 mt-n5">
+                <a href="javascript:;">
+                  <div class="p-3 pe-md-0">
+                    <img class="w-100 border-radius-md shadow-lg" src="{% static '/assets/images/about5.jpeg' %}"
+                      alt="image" />
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-8 col-md-6 col-12 my-auto">
+                <div class="card-body ps-lg-0">
+                  <h5 class="mb-0">Udaipur - Delhi</h5>
+                  <h6 class="text-info">By Road, Train and Flights</h6>
+                  <p class="mb-0">
+                    By Road- 11 hr 36 min covering 660 km<br />
+
+                    By Train- 13 hr journey covering a distance of 674 km<br />
+
+                    By Flight- 1.5 hrs covering a distance of 568 km
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="card card-profile mt-lg-4 mt-5">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12 mt-n5">
+                <a href="javascript:;">
+                  <div class="p-3 pe-md-0">
+                    <img class="w-100 border-radius-md shadow-lg" src="{% static '/assets/images/about3.jpeg' %}"
+                      alt="image" />
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-8 col-md-6 col-12 my-auto">
+                <div class="card-body ps-lg-0">
+                  <h5 class="mb-0">Udaipur - Ahmedabad</h5>
+                  <h6 class="text-info">By road and train</h6>
+                  <p class="mb-0">
+                    By Road- 5 hrs covering 254 km <br />By Train- 5 hrs
+                    covering 297 km
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-6 col-12">
+          <div class="card card-profile mt-4 z-index-2">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12 mt-n5">
+                <a href="javascript:;">
+                  <div class="p-3 pe-md-0">
+                    <img class="w-100 border-radius-md shadow-lg" src="{% static '/assets/images/about2.jpeg' %}"
+                      alt="image" />
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-8 col-md-6 col-12 my-auto">
+                <div class="card-body ps-lg-0">
+                  <h5 class="mb-0">Indore - Udaipur</h5>
+                  <h6 class="text-info">by road and train</h6>
+                  <p class="mb-0">
+                    By Road- 7.5 hrs covering 390 km <br />By Train- 9 hrs
+                    covering 479 km
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="card card-profile mt-lg-4 mt-5 z-index-2">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-12 mt-n5">
+                <a href="javascript:;">
+                  <div class="p-3 pe-md-0">
+                    <img class="w-100 border-radius-md shadow-lg" src="{% static '/assets/images/about1.jpeg' %}"
+                      alt="image" />
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-8 col-md-6 col-12 my-auto">
+                <div class="card-body ps-lg-0">
+                  <h5 class="mb-0">Udaipur - Jaipur</h5>
+                  <h6 class="text-info">by road Train</h6>
+                  <p class="mb-0">
+                    By Road- 6 hrs 36 minutes covering a distance of 393
+                    <br />By Train- 7 and a half hrs covering a distance of 430
+                    km.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 m-auto">
+          <h4>Unsure about the Itenary</h4>
+          <p class="mb-4">contact us to turn your worries into memories</p>
+          <div class="row">
+            <div class="col-4 ps-0">
+              <a href="/traveldesk" class="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 ms-auto">
+          <div class="position-relative">
+            <img class="max-width-50 w-100 position-relative z-index-2" src="{% static '/assets/images/about6.jpeg' %}"
+              alt="image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock content %}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<title>
+  Udaipur Travel Guide
+</title>
+<!-- CSS Files -->
+  <link id="pagestyle" href="{% static 'assets/css/material-kit.css' %}" rel="stylesheet" />
+  <script src="{% static 'assets/css/table.css' %}" type="text/javascript"></script>
+
+
+</head>
+
+<body class="index-page bg-gray-200">
+  
+  
+  <!-- Navbar -->
+
+<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
+<nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+  <div class="container-fluid px-0">
+    <a class="navbar-brand font-weight-bolder ms-sm-3" href="/index" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" >
+      Udaipur Travel Guide
+    </a>
+    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon mt-2">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+      <ul class="navbar-nav navbar-nav-hover ms-auto">
+        <li class="nav-item dropdown dropdown-hover mx-2">
+          <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+            
+           
+
+    <div class="d-flex mb-2 mt-3">
+     
+      <div class="w-100 d-flex align-items-center justify-content-between">
+       
+
+    <div class="d-flex mb-2 mt-3">
+      <div class="w-100 d-flex align-items-center justify-content-between">
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </ul>
+        </li>
+        <li style="list-style: none; padding-bottom: 17px" class="nav-item dropdown dropdown-hover mx-2">
+        <li style="list-style: none; padding-bottom:16.5px;" class="nav-item dropdown dropdown-hover mx-2">
+          <a class="nav-link ps-2 d-flex cursor-pointer align-items-center font-weight-bold" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+            Explore
+
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
+            <div class="d-none d-lg-block">
+  <ul class="list-group">
+    {% for i in list %}
+    <li class="nav-item list-group-item border-0 p-0">
+      <a class="dropdown-item py-2 ps-3 border-radius-md" href="/SinglePage/cat={{i.category}}">
+        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"> {{i.category}} </h6>
+        <span class="text-sm">list of places</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+          </ul>
+        </li>
+        <li style="list-style: none" class="nav-item ms-lg-4">
+          <a class="nav-link nav-link-icon me-2" href="/AboutView">
+            <i class="fa fa-github me-1"></i>
+            <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">About</p>
+          </a>
+        </li>
+        <li style="list-style: none" class="nav-item ms-lg-4">
+          <a class="nav-link nav-link-icon me-2" href="/feedback">
+            <i class="fa fa-github me-1"></i>
+            <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">Review us</p>
+          </a>
+        </li>
+        <li style="list-style: none"class="nav-item ms-lg-4">
+          <a class="nav-link nav-link-icon me-2" href="/traveldesk">
+            <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">Travel desk</p>
+          </a>
+        </li>
+        <li style="list-style: none"class="nav-item ms-lg-4">
+          <a class="nav-link nav-link-icon me-2" href="/signout">
+            <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">Sign-Out</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+</div></div></div>
+{% block content %}
+
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url({% static 'assets/images/hhh.jpg' %} )">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">Udaipur Travel Guide</h1>
+          <p class="lead text-white mt-3">Udaipur is the City of Lakes. Udaipur is one of the most beautiful cities in India, and I can proudly say that I live in Udaipur. The Fast Food of Udaipur's streets is so amazing that I can guarantee that you will not find fast food like Udaipur anywhere else in India. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+
+<section class="pt-3 pb-4" id="count-stats">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 mx-auto py-3">
+        <div class="row">
+          <div class="col-md-4 position-relative">
+            <div class="p-3 text-center">
+              <h1 class="text-gradient text-primary"><span id="state1" countTo="150">0</span>+</h1>
+              <h5 class="mt-3">Customers</h5>
+              <p class="text-sm font-weight-normal">Anna, Jane, Aryan, Crsyty and many more happy customers throughout the globe</p>
+            </div>
+            <hr class="vertical dark">
+          </div>
+          <div class="col-md-4 position-relative">
+            <div class="p-3 text-center">
+              <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span>+</h1>
+              <h5 class="mt-3">Countries</h5>
+              <p class="text-sm font-weight-normal">From India, to Paris, NY, Sydney or LA, helped people all around</p>
+            </div>
+            <hr class="vertical dark">
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 text-center">
+              <h1 class="text-gradient text-primary" id="state3" countTo="3">0</h1>
+              <h5 class="mt-3">Founders</h5>
+              <p class="text-sm font-weight-normal">Developed by 3 arcgatians</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="my-5 py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
+        <div class="rotating-card-container">
+          <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+            <div class="front front-background" style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
+              <div class="card-body py-7 text-center">
+                <i class="material-icons text-white text-4xl my-3"></i>
+                <h3 class="text-white">Explore the <br />City of Lakes</h3>
+                <p class="text-white opacity-8">Breathe in Udaipur, and you'll never want to leave.</p>
+              </div>
+            </div>
+            <div class="back back-background" style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
+              <div class="card-body pt-7 text-center">
+                <h3 class="text-white">Discover More</h3>
+                <p class="text-white opacity-8">A city of lakes, palaces, havelis and temples – a tourist's paradise.</p>
+                <a href="/traveldesk" class="btn btn-white btn-sm w-50 mx-auto mt-3">Travel Desk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 ms-auto">
+        <div class="row justify-content-start">
+          <div class="col-md-6">
+            <div class="info">
+              <i class="material-icons text-gradient text-primary text-3xl">Fateh Sagar</i>
+              <p class="pe-5">Your visit to Udaipur is incomplete till you have not enjoyed the heart throbbing views of its lakes. Fateh Sagar is one such kind of place in Udaipur. Not only tourists, even the local residents of Udaipur always enjoy most of their time at Fateh Sagar.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info">
+              <i class="material-icons text-gradient text-primary text-3xl">Gulab Bagh</i>
+              <p class="pe-3">Gulab Bagh is the perfect place for nature lovers. If you really want to enjoy the greenery of Udaipur then visit this place. It is situated at the center of the city. Gulab Bagh is the lifeline of Udaipur; it is the Green Heart of the city which provides clean and fresh air to the residents of Udaipur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-start mt-5">
+          <div class="col-md-6 mt-3">
+            <i class="material-icons text-gradient text-primary text-3xl">Dudh Talai</i>
+            <p class="pe-5"> Dudh Talai is another place in Udaipur which would offer of enjoying the lakeside view. This place is situated near the famous Pichhola Lake.</p>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="info">
+              <i class="material-icons text-gradient text-primary text-3xl">City palace</i>
+              <p class="pe-3">City Palace is located at the heart of Udaipur and was built by Maharana Udai Singh Ji. The palace is situated at the bank of Pichhola Lake. It is certainly would be a place to visit who has a keen interest in history of Rajasthan. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- -------   START CONTENT 1 - title & description and 6 IMAGES   -------- -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 mx-auto text-center mb-5">
+        <span class="badge badge-primary mb-2">Co-working</span>
+        <h2>Explore our places in Udaipur</h2>
+        <p>
+          If you can’t decide, the answer is no. If two equally difficult paths,
+          choose the one more painful in the short term (pain avoidance
+          is creating an illusion of equality).
+        </p>
+      </div>
+    </div>
+    <div class="row min-vh-25">
+      <div class="col-sm-4 col-5 mb-sm-0 mb-3">
+        <div style="background-image: url({% static 'assets/images/udaipur10.jpeg' %})" class="w-100 h-100 border-radius-lg shadow bg-cover"></div>
+      </div>
+      <div class="col-sm-3 col-7 mb-sm-0 mb-3">
+        <div style="background-image: url({% static 'assets/images/udaipur8.jpeg' %})" class="w-100 h-100 border-radius-lg bg-cover"></div>
+      </div>
+      <div class="col-sm-5 mb-sm-0 mb-3">
+        <div style="background-image: url({% static 'assets/images/udaipur5.jpeg' %})" class="w-100 h-100 border-radius-lg shadow bg-cover"></div>
+      </div>
+    </div>
+    <div class="row min-vh-25 mt-4">
+      <div class="col-sm-3 col-7 mb-sm-0 mb-3">
+        <div style="background-image: url({% static 'assets/images/udaipur3.jpeg' %})" class="w-100 h-100 border-radius-lg shadow bg-cover"></div>
+      </div>
+      <div class="col-sm-5 col-5 mb-sm-0 mb-3">
+        <div style="background-image: url({% static 'assets/images/udaipur2.jpeg' %})" class="w-100 h-100 border-radius-lg shadow bg-cover"></div>
+      </div>
+      <div class="col-sm-4 mb-sm-0 mb-3">
+        <div style="background-image: url({% static 'assets/images/udaipur1.jpeg' %})" class="w-100 h-100 border-radius-lg shadow bg-cover"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- -------   END CONTENT 1 - title & description and 6 IMAGES   -------- -->
+
+{% endblock content %}
+
+
+{% block body %}
+{% endblock body %}
+
+<!-- -------   START PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 ms-auto">
+        <h4 class="mb-1">Thank you for your support!</h4>
+        <p class="lead mb-0">We deliver the best web services</p>
+      </div>
+      <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
+        <a href="#" class="btn btn-twitter mb-0 me-2">
+          <i class="fab fa-twitter me-1">Instagram</i> 
+        </a>
+        <a href="#" class="btn btn-facebook mb-0 me-2">
+          <i class="fab fa-facebook-square me-1"></i> facebook
+        </a>
+        <a href="#" class="btn btn-pinterest mb-0 me-2">
+          <i class="fab fa-pinterest me-1"></i> Pinterest
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------   END PRE-FOOTER 2 - simple social line w/ title & 3 buttons    -------- -->
+
+</div>
+
+  <footer class="footer pt-5 mt-5">
+  <div class="container">
+    <div class=" row">
+      <div class="col-md-3 mb-4 ms-auto">
+        <div>
+          <a href="/">
+            <h6 class="font-weight-bolder mb-4">Udaipur Travel Guide</h6> 
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="col-md-2 col-sm-6 col-6 mb-6">
+        <div>
+          <h6 class="text-sm">Company</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/AboutView">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6 col-6 mb-6">
+        <div>
+          <h6 class="text-sm">Help & Support</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/feedback">
+                Review
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/traveldesk">
+                Travel Desk
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-6 col-6 mb-4 me-6">
+        <div>
+          <h6 class="text-sm">Legal</h6>
+          <ul class="flex-column ms-n3 nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Terms & Conditions
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Privacy Policy
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Licenses
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="text-center">
+          <p class="text-dark my-4 text-sm font-weight-normal">
+            All rights reserved. Copyright © <script>document.write(new Date().getFullYear())</script> Udaipur Travel Guide <a href="https://www.creative-tim.com" target="_blank">SAS</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--   Core JS Files   -->
+
+<script src="{% static 'assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+
+
+<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+<script src="{% static 'assets/js/plugins/countup.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/choices.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/prism.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/highlight.min.js' %}"></script>
+
+<!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+<script src="{% static 'assets/js/plugins/rellax.min.js' %}"></script>
+<!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+<script src="{% static 'assets/js/plugins/tilt.min.js' %}"></script>
+<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+<script src="{% static 'assets/js/plugins/choices.min.js' %}"></script>
+<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+<script src="{% static 'assets/js/plugins/parallax.min.js' %}"></script>
+<script src="{% static 'assets/js/validation.js' %}" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+  if (document.getElementById('state1')) {
+    const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+    if (!countUp.error) {
+      countUp.start();
+    } else {
+      console.error(countUp.error);
+    }
+  }
+  if (document.getElementById('state2')) {
+    const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+    if (!countUp1.error) {
+      countUp1.start();
+    } else {
+      console.error(countUp1.error);
+    }
+  }
+  if (document.getElementById('state3')) {
+    const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+    if (!countUp2.error) {
+      countUp2.start();
+    } else {
+      console.error(countUp2.error);
+    };
+  }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<title>
+  Udaipur Travel Guide
+</title>
+<!-- CSS Files -->
+  <link id="pagestyle" href="{% static 'assets/css/material-kit.css' %}" rel="stylesheet" />
+</head>
+
+<body class="index-page bg-gray-200">
+
+<!--  Header -->
+
+  <header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url({% static 'assets/images/hhh.jpg' %} )">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">Udaipur Travel Guide</h1>
+          <p class="lead text-white mt-3">Udaipur is the City of Lakes. Udaipur is one of the most beautiful cities in India, and I can proudly say that I live in Udaipur. The Fast Food of Udaipur's streets is so amazing that I can guarantee that you will not find fast food like Udaipur anywhere else in India. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="my-5 py-5">
+  <div class="container">
+    {% for message in messages %}
+          <div class="alert alert-{{ message.tags}} m-2" id="msg" role="alert">
+           <h3 style="text-align:center ;">---------- {{ message }}----------</h3>
+          </div>
+        {% endfor %}
+    <div class="row align-items-center">
+      <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
+        <div class="rotating-card-container">
+          <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
+
+            <div class="front front-background" style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
+              <div class="card-body py-7 text-center">
+                <i class="material-icons text-white text-4xl my-3"></i>
+                <h3 class="text-white">Already a User??</h3>
+                <p class="text-white opacity-8">Breathe in and login.</p>
+              </div>
+            </div>
+            <div class="back back-background" style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
+              <div class="card-body pt-7 text-center">
+                <h3 class="text-white">Login to explore</h3>
+                <p class="text-white opacity-8">A city of lakes, palaces, havelis and temples – a tourist's paradise.</p>
+                <a href="/login" class="btn btn-white btn-sm w-50 mx-auto mt-3">SIGN IN</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
+        <h3 class="text-center"><u>Sign-Up</u></h3>
+
+        <form action="" method="post" enctype="multipart/form-data" name="frm" autocomplete="off">
+            {% csrf_token %}
+            <div class="row">
+              <div class="mb-4">
+                <div class="input-group input-group-dynamic mb-4">
+                  <input class="form-control" type="text" name="name" id='name_input' placeholder="Enter Your Name" onblur="checkname();" required >
+                  <span id="error" style="color:red;"></span>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="input-group input-group-dynamic">
+                  <input type="email" class="form-control" name="email" placeholder="Enter Your Email" onblur="checkEmail();" required >
+                  <span id="errorMessageShowData" style="color:red;"></span>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <div class="input-group input-group-dynamic">
+                  <input type="password" class="form-control" name="password1" placeholder="password" onblur="checkPassword()" required >
+                  <span id="errorPassword" style="color:red;"></span>
+                </div>
+                <p>password must be of Minimum eight characters</p>
+              </div>
+              <div class="mb-4">
+                <div class="input-group input-group-dynamic">
+                  <input type="password" class="form-control" name="password2" placeholder="confirm password" onblur="checkConfirmPassword()" required >
+                  <span id="errorPassword2" style="color:red;"></span>
+                </div>
+              </div>
+
+            <div class="row">
+              <div class="col-md-12">
+              <!------------       recaptch          ----------------->
+                <div class="g-recaptcha" data-sitekey="6LeAePQhAAAAACSV5TNY8KQ2GEGdxpS1TPVHvI4e"></div>
+
+                <button type="submit" class="btn bg-gradient-dark w-100">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'assets/js/validation.js' %}" type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>

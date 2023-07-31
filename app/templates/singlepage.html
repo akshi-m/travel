@@ -1,0 +1,103 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url({% static 'assets/images/hhh.jpg' %})">
+    <span class="mask bg-gradient-primary opacity-4"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+
+          <h1 class="text-white pt-3 mt-n5" id='category_song'>{{category}}</h1>
+          <p class="lead text-white mt-3">Udaipur is the City of Lakes. Udaipur is one of the most beautiful cities in India, and I can proudly say that I live in Udaipur. The Fast Food of Udaipur's streets is so amazing that I can guarantee that you will not find fast food like Udaipur anywhere else in India. </p>
+
+          <!-- audio play button  -->
+    <script>
+      function play() {
+        console.log("inside play function   ")
+        var category_head = document.getElementById('category_song').innerHTML  
+        console.log(category_head)
+        if (category_head=="lakes"){
+          var audio = document.getElementById("audio1");
+        audio.play();
+        }
+        else if (category_head=="temple"){
+          var audio = document.getElementById("audio2");
+        audio.play();
+        }
+        else if (category_head=="palace"){
+          var audio = document.getElementById("audio3");
+        audio.play();
+        }
+        else if (category_head=="nothing"){
+          var audio = document.getElementById("audio4");
+        audio.play();
+        }
+        
+      }
+    </script>
+    <audio id="audio1" src="{% static 'assets/audio/aa.mp3' %}"></audio>
+    <audio id="audio2" src="{% static 'assets/audio/bb.mp3' %}"></audio>
+    <audio id="audio3" src="{% static 'assets/audio/cc.mp3' %}"></audio>
+    <audio id="audio4" src="{% static 'assets/audio/ss.mp3' %}"></audio>
+
+          <button class="btn bg-gradient-primary btn-icon" type="button" onclick="play()">
+            <div class="d-flex align-items-center">
+              <i class="material-icons me-2" aria-hidden="true"></i>
+              Play Audio
+            </div>
+          </button>
+          <!-- audio play button ends here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header ends here -->
+<!-- dynamic content here -->
+<!-- -------- START Features w/ image on left & title & text & 3 cols on soft background -------- -->
+<ul>
+  {% for i in data %}
+  <li>
+
+    <section class="py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-3 position-relative max-width-300 ms-auto">
+            <div class="blur-shadow-image">
+              <img class="w-100 h-100 border-radius-xl position-absolute d-xl-block d-none" src="{{i.image.url}}"
+                alt="image">
+            </div>
+          </div>
+          <div class="col-lg-8 ms-auto">
+            <div class="row">
+              <div class="col-7">
+                <div class="p-3 text-start border-radius-lg">
+                  <h2 class="mt-5">{{i.place}}</h2>
+                  <p class="text-dark text-lg mt-3">
+                    <span class="font-weight-bold">Timings</span>
+                    {{i.timing}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-9 col-md-4 py-3">
+                <div class="p-3 text-start">
+                  <h5 class="mt-3">{{i.place}}</h5>
+                  <p>{{i.description}}</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </li>
+  {% endfor %}
+</ul>
+<!-- -------- END Features w/ image on left & title & text & 3 cols on soft background -------- -->
+
+{% endblock content %}

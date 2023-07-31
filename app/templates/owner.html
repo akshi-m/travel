@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% block content %}
+<header class="header-2">
+  <div class="page-header min-vh-50 relative" style="background-image: url({% static 'assets/images/zz.jpg' %} )">
+    
+    <!-- <span class="mask bg-gradient-primary opacity-4"></span> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n1">Premises Owner</h1>
+          <p class="lead text-white mt-0">Udaipur is the City of Lakes. Udaipur is one of the most beautiful cities in India, and I can proudly say that I live in Udaipur. The Fast Food of Udaipur's streets is so amazing that I can guarantee that you will not find fast food like Udaipur anywhere else in India. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock content %}
+{% block body%}
+
+<div class="container">
+   <!-- single row checkbox element -->
+   <table class="table">
+  <tr>
+    <th class="td">Username</th>
+    <th class="td">Email</th>
+    <th class="td">Status</th>
+    <th class="td">Action</th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td class="th">{{i.username}}</td>
+    <td class="th">{{i.email}} </td>
+    <td class="th" id="active_status" >Not active</td>
+    <td class="th"><a href="/approve/id={{i.id}}"><button>Approve</button></a></td>
+  </tr>
+  {% endfor %}
+</table>
+    <!-- single row checkbox element -->
+</div>
+
+{% endblock body %}
+
+
+<!-- -------------------------------------------- -->
+

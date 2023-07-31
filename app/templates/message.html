@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<title>
+  Udaipur Travel Guide
+</title>
+<!-- CSS Files -->
+  <link id="pagestyle" href="{% static 'assets/css/material-kit.css' %}" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="index-page bg-gray-200">
+<header class="header-2">
+
+  <div class="page-header min-vh-75 relative" style="background-image: url({% static 'assets/images/yy.jpg' %})">
+
+    <!-- <span class="mask bg-gradient-primary opacity-4"></span> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">Udaipur Travel Guide</h1>
+          <p class="lead text-white mt-3">
+            Udaipur is the City of Lakes. Udaipur is one of the most beautiful
+            cities in India, and I can proudly say that I live in Udaipur. The
+            Fast Food of Udaipur's streets is so amazing that I can guarantee
+            that you will not find fast food like Udaipur anywhere else in
+            India.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<h3>
+
+<div class="container text-center py-6 me-auto mt-n5">
+       {% for message in messages %}
+<div class="alert-alert-{{message.tags}} alert-dismissible fade show" role="alert">
+	<strong>Message:</strong>{{message}}
+  </div>
+  {% endfor %}
+
+  </div>
+
+</h3>
+
+</body>
+</html>

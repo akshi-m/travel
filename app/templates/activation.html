@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+welcome to Udaipur Travel guide Login
+
+hey {{obj.username}}!!
+
+please confirm your email by clicking on following link
+
+confirmation link : http://{{ domain }}{% url 'activate' uid64=uid token=token %}
+
+{% endautoescape %}

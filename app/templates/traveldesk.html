@@ -1,0 +1,115 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url({% static 'assets/images/qq.jpg' %})">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">Udaipur Travel Guide</h1>
+          <p class="lead text-white mt-3">Udaipur is the City of Lakes. Udaipur is one of the most beautiful cities in
+            India, and I can proudly say that I live in Udaipur. The Fast Food of Udaipur's streets is so amazing that I
+            can guarantee that you will not find fast food like Udaipur anywhere else in India. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock content %}
+{% block body %}
+     <section>
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
+         {% for message in messages %}
+<div class="alert-alert-{{message.tags}} alert-dismissible fade show " role="alert">
+  <h3 style="text-align:center ;">-------{{message}}--------</h3>
+  </div>
+  {% endfor %}
+        <h3 class="text-center"><u>Travel-Desk</u></h3>
+        <form action="/traveldesk" method="post" name="frm" autocomplete="off">
+          {% csrf_token %}
+          <div class="row">
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic mb-4">
+                <input class="form-control" type="text" name="name" id='name_input' placeholder="Enter Your Name"
+                  onblur="checkname();" required>
+                <span id="error" style="color:red;"></span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <input type="email" class="form-control" name="email" id="email_input" placeholder="Enter Your Email"
+                  onblur="checkEmail();" required>
+                <span id="errorMessageShowData" style="color:red;"></span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <input type="date" id="date" class="form-control" id="date_input" name="expected_date" required>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <input type="tel" class="form-control" name="phone" id="phone_input" placeholder="Enter 10 digit phone number"
+                  onblur="checkphone()" required>
+                  <span id="errorPhone" style="color:red;"></span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <input type="number" class="form-control" onblur="checkPerson();" name="number_of_person" id="number_input"
+                  placeholder="Enter Your Number of person(minimum 1)" required>
+                <span id="errorData" style="color:red;"></span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <textarea name="message" class="form-control" id="messag_input" required rows="4"
+                  placeholder="Enter Your Message" ></textarea>
+
+              </div>
+            </div>
+              <div class="row" >
+                <div class="col-md-6">
+                  <input type="reset" class="btn bg-gradient-dark w-100">
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn bg-gradient-dark w-100" id="sendbutton">Submit</button>
+                </div>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<hr style="border:1px solid black;">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(function () {
+    var dtToday = new Date();
+
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    console.log(month)
+    console.log(year)
+    console.log(day)
+    console.log(dtToday)
+
+    if (month < 10)
+
+      month = '0' + month.toString();
+    console.log(month)
+    if (day < 10)
+      day = '0' + day.toString();
+    console.log(day)
+    var minDate = year + '-' + month + '-' + day;
+    console.log(minDate)
+    $('#date').attr('min', minDate);
+  });
+</script>
+
+{% endblock body %}

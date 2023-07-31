@@ -1,0 +1,82 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url({% static 'assets/images/zz.jpg' %} )">
+
+    <!-- <span class="mask bg-gradient-primary opacity-4"></span> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">Udaipur Travel Guide</h1>
+          <p class="lead text-white mt-3">Udaipur is the City of Lakes. Udaipur is one of the most beautiful cities in
+            India, and I can proudly say that I live in Udaipur. The Fast Food of Udaipur's streets is so amazing that I
+            can guarantee that you will not find fast food like Udaipur anywhere else in India. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock content %}
+
+{% block body %}
+<section>
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
+        {% for message in messages %}
+        <div class="alert-alert-{{message.tags}} alert-dismissible fade show" role="alert">
+          <h3 style="text-align:center ;">----------{{message}}---------</h3>
+        </div>
+        {% endfor %}
+        <h3 class="text-center"><u>Review-Us</u></h3>
+        <form action="" method="post" enctype="multipart/form-data" name="frm" autocomplete="off">
+          {% csrf_token %}
+          <div class="row">
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic mb-4">
+                <input class="form-control" type="text" name="name" placeholder="Enter Your Name" onblur="checkname()"
+                  required>
+                <span id="error" style="color:red;"></span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <input type="email" class="form-control" name="email" placeholder="Enter Your Email"
+                  onblur="checkEmail();" required>
+                <span id="errorMessageShowData" style="color:red;"></span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <textarea name="review" class="form-control" required rows="4"
+                  placeholder="Enter Your Message"></textarea>
+                <span id="errorData" style="color:red;"></span>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="input-group input-group-dynamic">
+                <input type="file" id="feedback_image" name="image" onchange="Filevalidation()" accept="image/*"
+                  required />
+                <p id='size'>image should be less than 2 mb
+                <p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="reset" class="btn bg-gradient-dark w-100">
+              </div>
+              <div class="col-md-6">
+                <button type="submit" class="btn bg-gradient-dark w-100" id="sendbutton">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<hr style="border:2px solid black">
+
+{% endblock body %}
